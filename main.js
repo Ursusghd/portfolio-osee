@@ -168,6 +168,24 @@ window.addEventListener('load', startSystem);
 window.addEventListener('resize', initParticles);
 
 // 5. Smooth Scroll & Interaction
+const menuToggle = document.getElementById('menu-toggle');
+const systemNav = document.getElementById('system-nav');
+
+if (menuToggle && systemNav) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        systemNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    systemNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            systemNav.classList.remove('active');
+        });
+    });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

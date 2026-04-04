@@ -171,6 +171,27 @@ body::after {
     width: 100%;
 }
 
+/* Mobile Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+.menu-toggle.active span:nth-child(2) { opacity: 0; }
+.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
 /* Utilities */
 .centered {
     display: flex !important;
@@ -562,11 +583,90 @@ footer {
     transform: translateY(0);
 }
 
+/* Responsive Adjustments V2.3 */
 @media (max-width: 1100px) {
+    .system-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: rgba(8, 8, 8, 0.95);
+        backdrop-filter: blur(20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        border-left: 1px solid var(--glass-border);
+    }
+
+    .system-nav.active {
+        right: 0;
+    }
+
+    .system-nav a {
+        margin: 20px 0;
+        font-size: 1.5rem;
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .system-status {
+        display: none;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+    }
+
+    .version {
+        display: none;
+    }
+
     .identity-card, .dashboard { 
         flex-direction: column !important; 
         text-align: center !important;
+        padding: 30px 20px;
     }
-    .image-wrapper { width: 100%; height: 350px; }
-    .metrics-grid { justify-content: center; }
+    
+    .identity-card { gap: 30px; }
+
+    .image-wrapper { 
+        width: 260px; 
+        height: 340px; 
+        margin: 0 auto;
+    }
+
+    .bold-title {
+        font-size: 2.5rem;
+    }
+
+    .manifesto {
+        font-size: 1.2rem;
+    }
+
+    /* Connection Node Fix */
+    .contact-form h2 {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .social-icons-wrapper {
+        gap: 20px;
+    }
+
+    .page-section {
+        padding: 80px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-name { font-size: 2.8rem; }
+    .sub-heading { letter-spacing: 0.2rem; font-size: 0.8rem; }
+    .role-desc { font-size: 1rem; }
 }
