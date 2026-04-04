@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNOW | Bamidele Keaden Osée</title>
+    <meta name="description" content="Portfolio numérique immersif de Bamidele Keaden Osée, CEO de SNOW. Expert en Digital | Marketing | Finance.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="system-initializing scrolling-layout">
+    <!-- Noise overlay -->
+    <div class="noise-overlay"></div>
+    
+    <!-- Particle System Canvas -->
+    <canvas id="snow-particles"></canvas>
+    <div class="bg-gradient-overlay"></div>
+    
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation / System Header -->
+    <header class="system-header">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 8px;">
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+            </svg>
+            SNOW <span class="version">v2.0.26</span>
+        </div>
+        <nav class="system-nav">
+            <a href="#about">IDENTITÉ</a>
+            <a href="#expertise">CAPACITÉS</a>
+            <a href="#experience">PARCOURS</a>
+            <a href="#vision">VISION</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div class="system-status">
+            <span class="status-indicator"></span> SYSTÈME OPÉRATIONNEL
+        </div>
+    </header>
+
+    <main id="app">
+        <!-- 1. HERO — “SYSTEM ENTRY” -->
+        <section id="hero" class="hero-section">
+            <div class="glitch-container" data-reveal>
+                <h2 class="sub-heading">BÂTIR L'AVENIR NUMÉRIQUE DE L'AFRIQUE</h2>
+                <h1 class="main-name scan-effect">BAMIDELE KEADEN OSÉE</h1>
+                <p class="role-desc">CEO SNOW — Expert en Digital | Marketing | Finance</p>
+                <div class="cta-container">
+                    <a href="#about" class="btn-glow">[ ACCÉDER AU SYSTÈME ]</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT — “IDENTITY MODULE” -->
+        <section id="about" class="page-section centered">
+            <div class="module-content" data-reveal="snow-build">
+                <div class="identity-card glassmorphism">
+                    <div class="image-wrapper portrait" id="portrait-placeholder">
+                        <img src="/n1.jpeg" alt="Bamidele Keaden Osée" class="profile-img" id="profile-img">
+                        <div class="scanning-bar"></div>
+                    </div>
+                    <div class="text-content">
+                        <h2>ID: MODULE_IDENTITÉ</h2>
+                        <p class="data-loading">Bamidele Keaden Osée est un expert en digital, spécialisé en graphisme et intelligence artificielle. Il accompagne les entreprises et les entrepreneurs en tant que consultant et coach en marketing et en gestion de projet.</p>
+                        <p class="data-loading">Grâce à ses compétences en finance et en comptabilité, il adopte une approche stratégique complète orientée performance et croissance.</p>
+                        <p class="data-loading">En tant que CEO de SNOW, il pilote la vision, la stratégie et le développement de solutions digitales innovantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. EXPERTISE — “CAPABILITY GRID” -->
+        <section id="expertise" class="page-section centered">
+            <h2 class="section-title" data-reveal="snow-build">GRILLE_DE_COMPÉTENCES</h2>
+            <div class="grid-container" data-reveal="snow-build">
+                <div class="module-card glassmorphism">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" stroke="var(--primary)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L4 2l3.5 12.5L15 16l3-3z"></path><path d="M2 22l5-5"></path><path d="M11 11l.5.5"></path></svg>
+                    </div>
+                    <h3>Graphisme & Identité visuelle</h3>
+                    <p>Création d'identités fortes et impactantes.</p>
+                </div>
+                <div class="module-card glassmorphism">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" stroke="var(--secondary)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12L2.5 4.5"></path><circle cx="12" cy="12" r="10"></circle><path d="M16 8l-4 4"></path></svg>
+                    </div>
+                    <h3>Intelligence Artificielle appliquée</h3>
+                    <p>Optimisation des processus par l'IA.</p>
+                </div>
+                <div class="module-card glassmorphism">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" stroke="var(--primary)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    </div>
+                    <h3>Marketing stratégique & digital</h3>
+                    <p>Stratégies de croissance orientées performance.</p>
+                </div>
+                <div class="module-card glassmorphism">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" stroke="var(--accent)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h3>Gestion de projet</h3>
+                    <p>Accompagnement de bout en bout des initiatives digitales.</p>
+                </div>
+                <div class="module-card glassmorphism">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" stroke="var(--primary)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3>Finance & Comptabilité</h3>
+                    <p>Analyse et pilotage financier stratégique.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPERIENCE — “TIMELINE SYSTEM” -->
+        <section id="experience" class="page-section centered">
+            <h2 class="section-title" data-reveal="snow-build">CHRONOLOGIE_SYSTÈME</h2>
+            <div class="timeline" data-reveal="snow-build">
+                <div class="timeline-line"></div>
+                <div class="timeline-node" data-year="2025">
+                    <div class="node-dot"></div>
+                    <div class="node-content glassmorphism">
+                        <h3>CEO SNOW</h3>
+                        <p>Pilotage de la vision et développement de solutions innovantes.</p>
+                    </div>
+                </div>
+                <div class="timeline-node" data-year="2019-2025">
+                    <div class="node-dot"></div>
+                    <div class="node-content glassmorphism">
+                        <h3>Directeur Adjoint et DAF (Directement Administrative et Financier)</h3>
+                        <p>Collège CAFRET : 2019-2025</p>
+                    </div>
+                </div>
+                <div class="timeline-node" data-year="2023">
+                    <div class="node-dot"></div>
+                    <div class="node-content glassmorphism">
+                        <h3>Manager Creation de Contenu Digital - New Gen TV</h3>
+                        <p>Gestion de l'équipe de création de contenu numérique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PROJETS — “CORE ENGINE” -->
+        <section id="projets" class="page-section centered">
+            <h2 class="section-title" data-reveal="snow-build">SECTION: PROJETS (SNOW VIEW)</h2>
+            <div class="dashboard glassmorphism" data-reveal="snow-build">
+                <div class="dashboard-text">
+                    <p>SNOW VIEW est une plateforme de monétisation de contenu qui permet aux créateurs de générer des revenus dès leurs premières vues. Le système repose sur une économie digitale basée sur une monnaie virtuelle appelée <strong>Snowcoin</strong>, favorisant un modèle plus équitable et accessible.</p>
+                </div>
+                <div class="image-wrapper dashboard-preview" style="margin-top: 30px; height: 350px;">
+                    <img src="/sn.jpeg" alt="Snow View Platform" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. VISION — “MISSION PROTOCOL” -->
+        <section id="vision" class="page-section centered">
+            <div class="vision-text" data-reveal="snow-build">
+                <h1 class="bold-title">UNE RÉVOLUTION DIGITALE EN AFRIQUE</h1>
+                <p class="manifesto centered-text">Mettre la technologie au service des talents. Construire un système où chaque compétence, chaque idée et chaque création peut générer de la valeur réelle.</p>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT — “CONNECTION NODE” -->
+        <section id="contact" class="page-section centered">
+            <div class="contact-form glassmorphism" data-reveal="snow-build">
+                <h2>NOEUD_DE_CONNEXION</h2>
+                <div class="social-icons-wrapper">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/22946096604" target="_blank" class="social-icon-link" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/ismr_snow" target="_blank" class="social-icon-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/1ETfMBMPFj/" target="_blank" class="social-icon-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                </div>
+                <p class="cta-vision centered-text">Disponible pour collaborations, consulting et projets innovants.</p>
+                <p class="cta-vision centered-text" style="margin-top: 10px; font-weight: bold;">Bâtissons l'avenir ensemble.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="system-footer">
+        <p>© 2026 SNOW ECOSYSTEM - Tous droits réservés.</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
