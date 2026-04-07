@@ -210,3 +210,32 @@ window.addEventListener('mousemove', (e) => {
         }, { duration: 600, fill: "forwards" });
     }
 });
+// 6. Vision Carousel Drag
+const visionTrack = document.getElementById('vision-track');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+if (visionTrack) {
+    visionTrack.addEventListener('mousedown', (e) => {
+        isDown = true;
+        visionTrack.classList.add('active');
+        startX = e.pageX - visionTrack.offsetLeft;
+        scrollLeft = visionTrack.scrollLeft;
+    });
+    visionTrack.addEventListener('mouseleave', () => {
+        isDown = false;
+        visionTrack.classList.remove('active');
+    });
+    visionTrack.addEventListener('mouseup', () => {
+        isDown = false;
+        visionTrack.classList.remove('active');
+    });
+    visionTrack.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - visionTrack.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed
+        visionTrack.scrollLeft = scrollLeft - walk;
+    });
+}
