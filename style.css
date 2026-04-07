@@ -536,6 +536,10 @@ section {
     cursor: grabbing;
 }
 
+.vision-track {
+    scroll-padding: 0 5vw;
+}
+
 .vision-card {
     flex: 0 0 450px;
     height: 500px;
@@ -766,6 +770,34 @@ footer {
 
     .page-section {
         padding: 80px 15px;
+    }
+
+    /* Vision Mobile Fix */
+    .vision-card {
+        flex: 0 0 85vw !important;
+        height: auto !important;
+        min-height: 480px;
+        padding: 40px 30px !important;
+        margin: 10px 0;
+    }
+
+    .vision-card h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .vision-card p {
+        font-size: 0.95rem !important;
+    }
+
+    .vision-card::before {
+        top: 25px !important;
+        left: 30px !important;
+    }
+
+    .vision-track {
+        gap: 20px !important;
+        padding: 20px 7.5vw !important;
     }
 }
 
